@@ -2,11 +2,7 @@
 <p>Bem-vindo ao maior livro de receitas online</p>
 
 <% @recipes.each do |recipe|%>
-<<<<<<< HEAD
   <h1><%= link_to recipe.title, recipe %></h1>
-=======
-  <h1><%= recipe.title %></h1>
->>>>>>> c03f30ae975d0a37a1b06ee825ddd65307542978
   <ul>
     <li><%= recipe.recipe_type %></li>
     <li><%= recipe.cuisine %></li>
@@ -14,3 +10,5 @@
     <li><%= "#{recipe.cook_time} minutos" %></li>
   </ul>
 <%end%>
+
+<%= link_to 'Enviar uma receita', new_recipe_path %>
