@@ -9992,3 +9992,960 @@ Processing by CuisineController#create as HTML
 Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-02 13:02:03 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:02:07 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:02:08 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rVo/4oyl0a8BgvtcFc9ASOnPfHLAhSRCoDZAVV6f4ypojES5rbZRo7jNv+fp4SMk6+/Q4lTrUejLslshN6JZcg==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 24ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 13:02:47 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:02:53 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:02:55 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uhnaajf0q2NDVBHRGTJUEoz8/UXgAB6Krpdj2ik0B80ClPXLoOU0ECXVfJaI40bljnFKG2y9rvwvfDk+KdlcfA==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:07:08 -0200
+Processing by RecipeController#new as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+NameError (undefined local variable or method `value' for Recipe (call 'Recipe.connection' to establish a connection):Class
+Did you mean?  validate):
+  
+app/models/recipe.rb:6:in `<class:Recipe>'
+app/models/recipe.rb:1:in `<top (required)>'
+app/controllers/recipe_controller.rb:8:in `new'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:07:33 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 31ms (Views: 17.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:07:35 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3mgs6Z93mq532j/MAAieuYVrnaYUi1yXqJUyDSK3+ZCO5QNICGYF3RFbUouR2YxOh+Yq+Jg27OEpfmjpIlqiIQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:10:13 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:10:14 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:18 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 31ms (Views: 17.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:10:20 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ozikLUoHu4wM4/HXvo8EmZ/xXToJUhnWfV9MUz+BxRzztYuM3RYk/2pinJAvXhZunXzqZIXvqaD8tBa3P2yerQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:10:23 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:30 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:38 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 34ms (Views: 19.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:38 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:39 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:10:39 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:10:39 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+Y/QF5afZKeSxsk5PrOS7hKJMiki9evWniSrfIonZ1LaxDhyUvi4fjKdmN1K9y8useTlig2Z9nbk8hJ8sXGLA==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:13:16 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:13:21 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 37ms (Views: 23.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:13:23 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:13:23 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wwlrAGIrBd40Wl/MM8viebCgD8zo2TeZdamsdBGv8rqThESh9TqarVLbMouiGvCOsi24kmRkh+/0QvaQEUKpCw==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:13:35 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:13:40 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:13:43 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V4PWSKEjE2Rqzb98+wDD+4sZs43oxkF/crgWJczH28QHDvnpNjKMFwxM0jtq0dEMiZQE02R78QnzU0zBzCqAdQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:15:42 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:15:43 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.4ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:15:44 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2tVp5PNHvqLjJ/NngSN0IGzjSuKAki8NMkqcvM1ItSX5noGBNyBie0N8ooP1Z8ngz46dQa/+Mq1InCW89h5ZQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  Rendered recipe/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `fist' for #<ActiveModel::Errors:0x007f2b1cf06240>
+Did you mean?  first):
+    4:   <% if @recipe.errors.any? %>
+    5:     <h2> Erro: </h2>
+    6:     <ul>
+    7:     <% @recipe.errors.fist[1].each do |attr, msg| %>
+    8:       <li><%= msg %></li>
+    9:     <% end %>
+   10:     </ul>
+  
+app/views/recipe/new.html.erb:7:in `block in _app_views_recipe_new_html_erb___3277120115972210723_69911573003320'
+app/views/recipe/new.html.erb:3:in `_app_views_recipe_new_html_erb___3277120115972210723_69911573003320'
+app/controllers/recipe_controller.rb:18:in `create'
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:15:57 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2tVp5PNHvqLjJ/NngSN0IGzjSuKAki8NMkqcvM1ItSX5noGBNyBie0N8ooP1Z8ngz46dQa/+Mq1InCW89h5ZQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  Rendered recipe/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Você deve informar todos os dados da receita":String):
+    4:   <% if @recipe.errors.any? %>
+    5:     <h2> Erro: </h2>
+    6:     <ul>
+    7:     <% @recipe.errors.first[1].each do |attr, msg| %>
+    8:       <li><%= msg %></li>
+    9:     <% end %>
+   10:     </ul>
+  
+app/views/recipe/new.html.erb:7:in `block in _app_views_recipe_new_html_erb___3277120115972210723_69911529322760'
+app/views/recipe/new.html.erb:3:in `_app_views_recipe_new_html_erb___3277120115972210723_69911529322760'
+app/controllers/recipe_controller.rb:18:in `create'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:16:00 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:16:02 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:16:03 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0LXwfsUxeRN8UJ7IjzQ3Trz3sfj/47JzCOXEY1kt8nSAON/fUiDmYBrR848e5SW5vnoGpnNeAgWJDp6HWcCpxQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  Rendered recipe/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Você deve informar todos os dados da receita":String):
+    4:   <% if @recipe.errors.any? %>
+    5:     <h2> Erro: </h2>
+    6:     <ul>
+    7:     <% @recipe.errors.first[1].each do |attr, msg| %>
+    8:       <li><%= msg %></li>
+    9:     <% end %>
+   10:     </ul>
+  
+app/views/recipe/new.html.erb:7:in `block in _app_views_recipe_new_html_erb___3277120115972210723_69911531781300'
+app/views/recipe/new.html.erb:3:in `_app_views_recipe_new_html_erb___3277120115972210723_69911531781300'
+app/controllers/recipe_controller.rb:18:in `create'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:16:32 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:16:34 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wsTtZVcx5ZuRHJEywm4qQ18geDsmXUWETz6FA+QqGN2SScLEwCB66Ped/HVTvzi0Xa3PZarg9fLO1d/n5MdDbA==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:17:12 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:17:16 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:17:18 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LP1XdT1Gr201uHCu5qzt9l+Tr11FAEIAPQPkDSE9lAR8cHjUqlcwHlM5Hel3ff8BXR4YA8m98na86L7pIdDPtQ==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cuisine" for 127.0.0.1 at 2018-01-02 13:20:54 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cuisine"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:21:00 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:21:03 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xh7DHSKNOm1KksfVwkNfNfpyoXEQPEm/e9Xai2Su3QqWk+y8tZylHiwTqpJTkk3C+P8WL5yB+cn6PoBvZEOGuw==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:21:18 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:21:20 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/IUtZU99owMA+BVyrDv9scQ6nVJV3dt9fDTE1vRBCu+sCALE2Gw8cGZ5eDU96u9GxrcqDNlgawv9354y9KxRXg==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cuisine" for 127.0.0.1 at 2018-01-02 13:21:34 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cuisine"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:21:37 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:21:39 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NiIhIq0sDwSQ2DCB2sxgA3gLe5b7mAOLYyxjbGzc06dmrw6DOj2Qd/ZZXcZLHXL0eobMyHcls/3ixzmIbDGIFg==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `html_safe' for ["Você deve informar o nome da cozinha"]:Array
+Did you mean?  html_safe?):
+     5:     <h2> Erro: </h2>
+     6:     <ul>
+     7:     <% @cuisine.errors.messages.each do |msg| %>
+     8:       <li><%= msg.last.html_safe %></li>
+     9:     <% end %>
+    10:     </ul>
+    11:   <% end %>
+  
+app/views/cuisine/new.html.erb:8:in `block (2 levels) in _app_views_cuisine_new_html_erb__3215391930198063519_69911522284060'
+app/views/cuisine/new.html.erb:7:in `each'
+app/views/cuisine/new.html.erb:7:in `block in _app_views_cuisine_new_html_erb__3215391930198063519_69911522284060'
+app/views/cuisine/new.html.erb:3:in `_app_views_cuisine_new_html_erb__3215391930198063519_69911522284060'
+app/controllers/cuisine_controller.rb:24:in `create'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:22:36 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:22:38 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1w2N4MxWbhhavLQxKfUcnH4CivUzdfM0lw2bcsrg/0n0RmWFCDGywfrn5dVdsaFc3W9dVhwZ7pTt2yJy8bYTA==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `last' for :name:Symbol):
+     5:     <h2> Erro: </h2>
+     6:     <ul>
+     7:     <% @cuisine.errors.each do |msg| %>
+     8:       <li><%= msg.last %></li>
+     9:     <% end %>
+    10:     </ul>
+    11:   <% end %>
+  
+app/views/cuisine/new.html.erb:8:in `block (2 levels) in _app_views_cuisine_new_html_erb__3215391930198063519_69911569887340'
+app/views/cuisine/new.html.erb:7:in `block in _app_views_cuisine_new_html_erb__3215391930198063519_69911569887340'
+app/views/cuisine/new.html.erb:3:in `_app_views_cuisine_new_html_erb__3215391930198063519_69911569887340'
+app/controllers/cuisine_controller.rb:24:in `create'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:23:26 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:23:28 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZssVj2ISstzEAa6KlLURfT9oiG7cAZAnG+NeqBuC8oxFgP3qpnVuBWRa/27g8ay9nAVfzfNtjYdhNeeoINQew==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `messages' for [:name, ["Você deve informar o nome da cozinha"]]:Array):
+     5:     <h2> Erro: </h2>
+     6:     <ul>
+     7:     <% @cuisine.errors.messages.each do |err| %>
+     8:       <li><%= err.messages.first[1] %></li>
+     9:     <% end %>
+    10:     </ul>
+    11:   <% end %>
+  
+app/views/cuisine/new.html.erb:8:in `block (2 levels) in _app_views_cuisine_new_html_erb__3215391930198063519_69911566121000'
+app/views/cuisine/new.html.erb:7:in `each'
+app/views/cuisine/new.html.erb:7:in `block in _app_views_cuisine_new_html_erb__3215391930198063519_69911566121000'
+app/views/cuisine/new.html.erb:3:in `_app_views_cuisine_new_html_erb__3215391930198063519_69911566121000'
+app/controllers/cuisine_controller.rb:24:in `create'
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:23:50 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZssVj2ISstzEAa6KlLURfT9oiG7cAZAnG+NeqBuC8oxFgP3qpnVuBWRa/27g8ay9nAVfzfNtjYdhNeeoINQew==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `messages' for :name:Symbol):
+     5:     <h2> Erro: </h2>
+     6:     <ul>
+     7:     <% @cuisine.errors.each do |err| %>
+     8:       <li><%= err.messages.first[1] %></li>
+     9:     <% end %>
+    10:     </ul>
+    11:   <% end %>
+  
+app/views/cuisine/new.html.erb:8:in `block (2 levels) in _app_views_cuisine_new_html_erb__3215391930198063519_69911400453980'
+app/views/cuisine/new.html.erb:7:in `block in _app_views_cuisine_new_html_erb__3215391930198063519_69911400453980'
+app/views/cuisine/new.html.erb:3:in `_app_views_cuisine_new_html_erb__3215391930198063519_69911400453980'
+app/controllers/cuisine_controller.rb:24:in `create'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:23:52 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:23:53 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vdSdmON6TAwIqI6aOZdz4qN0ch9ekmvpL/F63znr7hvtWbI5dGvTf24p492oRmEVofnFQdIv25+uGiA7OQa1qg==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `messages' for :name:Symbol):
+     5:     <h2> Erro: </h2>
+     6:     <ul>
+     7:     <% @cuisine.errors.each do |err| %>
+     8:       <li><%= err.messages.first[1] %></li>
+     9:     <% end %>
+    10:     </ul>
+    11:   <% end %>
+  
+app/views/cuisine/new.html.erb:8:in `block (2 levels) in _app_views_cuisine_new_html_erb__3215391930198063519_69911574101320'
+app/views/cuisine/new.html.erb:7:in `block in _app_views_cuisine_new_html_erb__3215391930198063519_69911574101320'
+app/views/cuisine/new.html.erb:3:in `_app_views_cuisine_new_html_erb__3215391930198063519_69911574101320'
+app/controllers/cuisine_controller.rb:24:in `create'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:24:25 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:24:28 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qqnbF1F8RTLk9jBxLi9huWJGW5b+ly7GJn+CICySOrn6JPS2xm3aQYJ3XTa//nNOYMvsyHIqnrCnlNjELH9hCA==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:25:13 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:25:15 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0DamPjjg6dx0q39Yknz4XuFrcq/wf7Vfuk6PmY0DCJKAu4mfr/F2rxIqEh8Dreqp4+bF8XzCBSk7pdV9je5TIw==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:25:34 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:25:36 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:25:38 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afgvfPpMYvzgU+fg4nYd/o50RXjUBzDcGfdNghHhq2Q5dQDdbV39j4bSiqdzpw8JjPnyJli6gKqYHBdmEQzw1Q==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2018-01-02 13:25:53 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cuisine" for 127.0.0.1 at 2018-01-02 13:25:54 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/cuisine"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:25:56 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cuisine/new" for 127.0.0.1 at 2018-01-02 13:25:57 -0200
+Processing by CuisineController#new as HTML
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cuisine" for 127.0.0.1 at 2018-01-02 13:25:57 -0200
+Processing by CuisineController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGDnB0GqEQPUWDUjKIExim3tBLbddzowMy+Nk1hIdGYY7cim1ruOcLLZWGS5UCN9b2Cz6FHKikayxNd3WKUv1w==", "cuisine"=>{"name"=>""}, "commit"=>"Enviar"}
+  Rendering cuisine/new.html.erb within layouts/application
+  Rendered cuisine/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 13:26:04 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 13:26:05 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V77iW9/K6Jy4zaEmbiJ3FEniNPYB/A+Fz76QLaXVP0YHM836SNt3795MzGH/82XjS2+DqI1Bv/NOVcrJpThk9w==", "recipe"=>{"title"=>"", "recipe_type"=>"", "cuisine_id"=>"1", "difficulty"=>"", "cook_time"=>"", "ingredients"=>"", "method"=>""}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+

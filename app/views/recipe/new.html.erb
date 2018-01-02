@@ -1,6 +1,15 @@
 <h1>Nova Receita</h1>
 
 <%= form_for @recipe,url: recipe_index_path(@recipe), html: { method: :post } do |f| %>
+  <% if @recipe.errors.any? %>
+    <h2> Erro: </h2>
+    <ul>
+    <% @recipe.errors.messages.each do |msg| %>
+      <li><%= msg.last.last %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <%= f.label :title, 'Título' %>
   <%= f.text_field :title %>
   <%= f.label :recipe_type, 'Tipo da Receita' %>
