@@ -10,4 +10,24 @@ class CuisineController < ApplicationController
     end
   end
 
+  def new
+    @cuisine = Cuisine.new
+  end
+
+  def create
+    cuisine = Cuisine.new cuisine_params
+    if cuisine.valid?
+      cuisine.save
+      redirect_to cuisine
+    else
+      @cuisine = cuisine
+      render :new
+    end
+  end
+
+  private 
+
+  def cuisine_params
+    params.require(:cuisine).permit(:name)
+  end
 end

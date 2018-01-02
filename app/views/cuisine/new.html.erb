@@ -1,0 +1,18 @@
+<h1>Nova Cozinha</h1>
+
+<%= form_for @cuisine,url: cuisine_index_path(@cuisine), html: { method: :post } do |f| %>
+  <% if @cuisine.errors.any? %>
+      <h2> Erro: </h2>
+      <ul>
+      <% @cuisine.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+
+  <%= f.submit 'Enviar' %>
+<% end %>
+
