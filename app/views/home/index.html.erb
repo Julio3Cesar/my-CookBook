@@ -13,13 +13,19 @@
           </li>
         </ul>
         <%end%>
+        <h3>Tipos de Receita</h3>
+        <% @recipe_types.each do |type|%>
+          <ul>
+            <li>
+              <h4> <%= link_to type.name, type %> </h4>
+            </li>
+          </ul>
+        <%end%>
     </aside>
   </div>
   <section>
     <% @recipes.each do |recipe|%>
-      <h1>
-        <%= link_to recipe.title, recipe %>
-      </h1>
+      <h1><%= link_to recipe.title, recipe %></h1>
       <ul>
         <li>
           <%= recipe.recipe_type %>

@@ -11189,3 +11189,1121 @@ Processing by RecipeController#new as HTML
 Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:48:12 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Cuisine Load (0.0ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 47ms (Views: 41.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipe_type/1" for 127.0.0.1 at 2018-01-02 15:48:25 -0200
+  
+ActionController::RoutingError (uninitialized constant RecipeTypeController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (124.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCuisines (20171230124649)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cuisines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171230124649"]]
+  [1m[35m (132.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRecipes (20171230131210)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "recipe_type" varchar, "cuisine_id" integer, "difficulty" varchar, "cook_time" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_be504d0fa1"
+FOREIGN KEY ("cuisine_id")
+  REFERENCES "cuisines" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_cuisine_id" ON "recipes" ("cuisine_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171230131210"]]
+  [1m[35m (139.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIngredientsAndMethodToRecipe (20171230131231)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "recipes" ADD "ingredients" text[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "recipes" ADD "method" text[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171230131231"]]
+  [1m[35m (95.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRecipeTypes (20180102153341)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "recipe_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180102153341"]]
+  [1m[35m (90.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRecipeTypeToRecipe (20180102164836)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "recipes" ADD "recipe_type_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_recipe_type_id" ON "recipes" ("recipe_type_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180102164836"]]
+  [1m[35m (126.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveRecipeTypeToRecipe (20180102165207)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "arecipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar DEFAULT NULL, "recipe_type" varchar DEFAULT NULL, "cuisine_id" integer DEFAULT NULL, "difficulty" varchar DEFAULT NULL, "cook_time" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ingredients" text DEFAULT NULL, "method" text DEFAULT NULL, "recipe_type_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "tindex_arecipes_on_recipe_type_id" ON "arecipes" ("recipe_type_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_arecipes_on_cuisine_id" ON "arecipes" ("cuisine_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "arecipes" ("id","title","recipe_type","cuisine_id","difficulty","cook_time","created_at","updated_at","ingredients","method","recipe_type_id")
+                     SELECT "id","title","recipe_type","cuisine_id","difficulty","cook_time","created_at","updated_at","ingredients","method","recipe_type_id" FROM "recipes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "recipes"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar DEFAULT NULL, "cuisine_id" integer DEFAULT NULL, "difficulty" varchar DEFAULT NULL, "cook_time" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "ingredients" text DEFAULT NULL, "method" text DEFAULT NULL, "recipe_type_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_arecipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_arecipes_on_cuisine_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_arecipes_on_recipe_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_arecipes_on_recipe_type_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_cuisine_id" ON "recipes" ("cuisine_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_recipes_on_recipe_type_id" ON "recipes" ("recipe_type_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("id","title","cuisine_id","difficulty","cook_time","created_at","updated_at","ingredients","method","recipe_type_id")
+                     SELECT "id","title","cuisine_id","difficulty","cook_time","created_at","updated_at","ingredients","method","recipe_type_id" FROM "arecipes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "arecipes"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180102165207"]]
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-02 17:49:24.650736"], ["updated_at", "2018-01-02 17:49:24.650736"]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:49:36 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:50:09 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "recipe_types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teste"], ["created_at", "2018-01-02 17:54:12.867250"], ["updated_at", "2018-01-02 17:54:12.867250"]]
+  [1m[35m (103.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:15 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipe_type/1" for 127.0.0.1 at 2018-01-02 15:54:18 -0200
+  
+ActionController::RoutingError (uninitialized constant RecipeTypeController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:19 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "recipe_types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teste"], ["created_at", "2018-01-02 17:54:46.482646"], ["updated_at", "2018-01-02 17:54:46.482646"]]
+  [1m[35m (90.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (105.7ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1c428af8>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911567227000'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911567227000'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:54 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (124.8ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1cef7b50>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911572915120'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911572915120'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:54 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (92.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1cbd1570>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911571239040'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911571239040'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:54 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (105.3ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b084efcc0>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911399695300'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911399695300'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:55 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.4ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (157.7ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1d06d458>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911573655400'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911573655400'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:56 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (108.3ms)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b34114930>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911766936020'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911766936020'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:57 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (95.1ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1c135f08>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911565677760'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911565677760'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:57 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.3ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (120.1ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b10151340>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911465070600'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911465070600'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:57 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (148.2ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b10aeb540>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911467048980'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911467048980'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:58 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.3ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:58 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (186.2ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b084c8030>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911399777820'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911399777820'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:58 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (115.7ms)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.7ms)
+
+
+  
+  Rendering home/index.html.erb within layouts/application
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b18378c60>
+Did you mean?  recipe_path
+               recipe_index_path):
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911533308800'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911533308800'
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (197.5ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b16fc6bb8>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911522982680'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911522982680'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:58 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.3ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (155.6ms)
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:59 -0200
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 1.0ms)
+
+
+Processing by HomeController#index as HTML
+  
+  Rendering home/index.html.erb within layouts/application
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b08d94010>
+Did you mean?  recipe_path
+               recipe_index_path):
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:59 -0200
+  [1m[36mRecipeType Load (0.7ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  
+Processing by HomeController#index as HTML
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911404389700'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911404389700'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:59 -0200
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+Processing by HomeController#index as HTML
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (376.2ms)
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendering home/index.html.erb within layouts/application
+Completed 500 Internal Server Error in 500ms (ActiveRecord: 1.3ms)
+
+
+  Rendered home/index.html.erb within layouts/application (238.1ms)
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 0.6ms)
+
+
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1d309db0>
+Did you mean?  recipe_path
+               recipe_index_path):
+  
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b1846a8a8>
+Did you mean?  recipe_path
+               recipe_index_path):
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911575024660'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911575024660'
+  
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911533803940'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911533803940'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:54:59 -0200
+  Rendered home/index.html.erb within layouts/application (289.5ms)
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 446ms (ActiveRecord: 0.8ms)
+
+
+  
+  Rendering home/index.html.erb within layouts/application
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x005637dbbef460>
+Did you mean?  recipe_path
+               recipe_index_path):
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_47398954914840'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_47398954914840'
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (240.8ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_type_path' for #<#<Class:0x007f2b1c42a858>:0x007f2b163ec810>
+Did you mean?  recipe_path
+               recipe_index_path):
+    17:         <% @recipe_types.each do |type|%>
+    18:           <ul>
+    19:             <li>
+    20:               <h4> <%= link_to type.name, type %> </h4>
+    21:             </li>
+    22:           </ul>
+    23:         <%end%>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb__3114526178084878138_69911516768580'
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb__3114526178084878138_69911516768580'
+Started GET "/" for 127.0.0.1 at 2018-01-02 15:55:14 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 1.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_recipe_type_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_recipes_on_cuisine_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "cuisines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teste"], ["created_at", "2018-01-02 18:05:29.195368"], ["updated_at", "2018-01-02 18:05:29.195368"]]
+  [1m[35m (108.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "cuisines" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "teste"], ["created_at", "2018-01-02 18:06:09.706249"], ["updated_at", "2018-01-02 18:06:09.706249"]]
+  [1m[35m (159.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:06:27 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cuisine/1" for 127.0.0.1 at 2018-01-02 16:06:35 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 1]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1><%= @cuisine.name %></h1>
+    2: 
+    3: <div class="notice"><%= flash[:notice] %></div>
+    4: <% @recipes.each do |recipe|%>
+    5:   <h1><%= link_to recipe.title, recipe %></h1>
+    6:   <ul>
+    7:     <li>
+  
+app/views/cuisine/show.html.erb:4:in `_app_views_cuisine_show_html_erb___4371770745680164699_69911766554600'
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:06:47 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipe/new" for 127.0.0.1 at 2018-01-02 16:06:49 -0200
+Processing by RecipeController#new as HTML
+  Rendering recipe/new.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  Rendered recipe/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recipe" for 127.0.0.1 at 2018-01-02 16:06:54 -0200
+Processing by RecipeController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VUO5xndfZK6IngFVvMxch2aX6UkHQWDdajXVrvCuN8KQlcKdVkzkojHRRe5A4j/rZLdF2ZMvFXcBsc7amZONmg==", "recipe"=>{"title"=>"asas", "cuisine_id"=>"1", "recipe_type_id"=>"1", "difficulty"=>"as", "cook_time"=>"as", "ingredients"=>"as", "method"=>"as"}, "commit"=>"Enviar"}
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "cuisine_id", "difficulty", "cook_time", "created_at", "updated_at", "ingredients", "method", "recipe_type_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asas"], ["cuisine_id", 1], ["difficulty", "as"], ["cook_time", 0], ["created_at", "2018-01-02 18:06:54.751296"], ["updated_at", "2018-01-02 18:06:54.751296"], ["ingredients", "as"], ["method", "as"], ["recipe_type_id", 1]]
+  [1m[35m (209.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/recipe/1
+Completed 302 Found in 223ms (ActiveRecord: 211.5ms)
+
+
+Started GET "/recipe/1" for 127.0.0.1 at 2018-01-02 16:06:55 -0200
+Processing by RecipeController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe/show.html.erb within layouts/application
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered recipe/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:06:59 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:34 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.3ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:34 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:34 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.4ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cuisine/1" for 127.0.0.1 at 2018-01-02 16:07:35 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 1]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Recipe:0x007f2b1d3b8b80>):
+    1: <h1><%= @cuisine.name %></h1>
+    2: 
+    3: <div class="notice"><%= flash[:notice] %></div>
+    4: <% @recipes.each do |recipe|%>
+    5:   <h1><%= link_to recipe.title, recipe %></h1>
+    6:   <ul>
+    7:     <li>
+  
+app/views/cuisine/show.html.erb:4:in `_app_views_cuisine_show_html_erb___4371770745680164699_69911575238340'
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:37 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cuisine/2" for 127.0.0.1 at 2018-01-02 16:07:39 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 2], ["LIMIT", 1]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1><%= @cuisine.name %></h1>
+    2: 
+    3: <div class="notice"><%= flash[:notice] %></div>
+    4: <% @recipes.each do |recipe|%>
+    5:   <h1><%= link_to recipe.title, recipe %></h1>
+    6:   <ul>
+    7:     <li>
+  
+app/views/cuisine/show.html.erb:4:in `_app_views_cuisine_show_html_erb___4371770745680164699_69911405069720'
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:07:42 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cuisine/1" for 127.0.0.1 at 2018-01-02 16:08:13 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 1]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Recipe:0x007f2b10308648>):
+    1: <h1><%= @cuisine.name %></h1>
+    2: 
+    3: <div class="notice"><%= flash[:notice] %></div>
+    4: <% @recipes.each do |recipe|%>
+    5:   <h1><%= link_to recipe.title, recipe %></h1>
+    6:   <ul>
+    7:     <li>
+  
+app/views/cuisine/show.html.erb:4:in `_app_views_cuisine_show_html_erb___4371770745680164699_69911465946820'
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ? LIMIT ?[0m  [["cuisine_id", 1], ["LIMIT", 11]]
+Started GET "/cuisine/1" for 127.0.0.1 at 2018-01-02 16:15:12 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ?[0m  [["cuisine_id", 1]]
+  Rendering cuisine/show.html.erb within layouts/application
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered cuisine/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 39ms (Views: 18.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-02 16:16:52 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT "cuisines".* FROM "cuisines"[0m
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT "recipe_types".* FROM "recipe_types"[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 52ms (Views: 36.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cuisine/2" for 127.0.0.1 at 2018-01-02 16:16:53 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ?[0m  [["cuisine_id", 2]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipe_type/1" for 127.0.0.1 at 2018-01-02 16:16:56 -0200
+Processing by RecipeTypeController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipe_type/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."recipe_type_id" = ?[0m  [["recipe_type_id", 1]]
+  [1m[36mRecipeType Load (0.2ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCuisine Load (0.2ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered recipe_type/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipe_type/2" for 127.0.0.1 at 2018-01-02 16:19:48 -0200
+Processing by RecipeTypeController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."recipe_type_id" = ?[0m  [["recipe_type_id", 2]]
+  Rendering recipe_type/show.html.erb within layouts/application
+  Rendered recipe_type/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 11.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipe_type/2" for 127.0.0.1 at 2018-01-02 16:19:52 -0200
+Processing by RecipeTypeController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipeType Load (0.1ms)[0m  [1m[34mSELECT  "recipe_types".* FROM "recipe_types" WHERE "recipe_types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."recipe_type_id" = ?[0m  [["recipe_type_id", 2]]
+  Rendering recipe_type/show.html.erb within layouts/application
+  Rendered recipe_type/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cuisine/2" for 127.0.0.1 at 2018-01-02 16:20:03 -0200
+Processing by CuisineController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCuisine Load (0.1ms)[0m  [1m[34mSELECT  "cuisines".* FROM "cuisines" WHERE "cuisines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."cuisine_id" = ?[0m  [["cuisine_id", 2]]
+  Rendering cuisine/show.html.erb within layouts/application
+  Rendered cuisine/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 12.7ms | ActiveRecord: 0.9ms)
+
+

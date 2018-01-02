@@ -17,5 +17,5 @@
  aside{
   float: right; /*define que o elemento deve flutuar à direita*/
   padding: 10px; /*espaço entre a borda e o conteúdo do elemento*/
-  width: 15%; /*largura*/
+  width: 20%; /*largura*/
 }
