@@ -12,11 +12,15 @@
 
   <%= f.label :title, 'Título' %>
   <%= f.text_field :title %>
-  <%= f.label :recipe_type, 'Tipo da Receita' %>
-  <%= f.text_field :recipe_type %>
   <%= f.label :cuisine_id, 'Cozinha' %>
   <%= f.select(:cuisine_id) do %>
     <% Cuisine.all.each do |c| -%>
+      <%= content_tag(:option, c.name, value: c.id) %>
+    <% end %>
+  <% end %>
+  <%= f.label :recipe_type_id, 'Tipo da Receita' %>
+  <%= f.select(:recipe_type_id) do %>
+    <% RecipeType.all.each do |c| -%>
       <%= content_tag(:option, c.name, value: c.id) %>
     <% end %>
   <% end %>
