@@ -1,34 +1,47 @@
-<%= form_for @recipe do |f| %>
-  <% if @recipe.errors.any? %>
-    <h2> Erro: </h2>
-    <ul>
-    <% @recipe.errors.messages.each do |msg| %>
-      <li><%= msg.last.last %></li>
-    <% end %>
-    </ul>
-  <% end %>
+<section class ="row">
+  <div class="form-group">
+    <%= form_for @recipe do |f| %>
+      <section class="row">
+        <div class="col-md-6">
+          <% if @recipe.errors.any? %>
+            <h2> Erro: </h2>
+            <ul>
+            <% @recipe.errors.messages.each do |msg| %>
+              <li><%= msg.last.last %></li>
+            <% end %>
+            </ul>
+          <% end %>
+        </div>
+      </section>
 
-  <%= f.label :title, 'Título' %>
-  <%= f.text_field :title %>
-  <%= f.label :cuisine_id, 'Cozinha' %>
-  <%= f.select(:cuisine_id) do %>
-    <% Cuisine.all.each do |c| -%>
-      <%= content_tag(:option, c.name, value: c.id) %>
-    <% end %>
-  <% end %>
-  <%= f.label :recipe_type_id, 'Tipo da Receita' %>
-  <%= f.select(:recipe_type_id) do %>
-    <% RecipeType.all.each do |c| -%>
-      <%= content_tag(:option, c.name, value: c.id) %>
-    <% end %>
-  <% end %>
-  <%= f.label :difficulty, 'Dificuldade' %>
-  <%= f.text_field :difficulty %>
-  <%= f.label :cook_time, 'Tempo de Preparo' %>
-  <%= f.text_field :cook_time %>
-  <%= f.label :ingredients, 'Ingredientes' %>
-  <%= f.text_field :ingredients %>
-  <%= f.label :method, 'Como Preparar' %>
-  <%= f.text_field :method %>
-  <%= f.submit 'Enviar' %>
-<% end %>
+      <section class="row">
+        <div class="col col-md-4 col-md-offset-0">
+          <%= f.label :title, 'Título' %>
+          <%= f.text_field :title, class:'form-control' %>
+          <%= f.label :cuisine_id, 'Cozinha' %>
+          <%= f.select(:cuisine_id) do %>
+            <% Cuisine.all.each do |c| -%>
+              <%= content_tag(:option, c.name, value: c.id) %>
+            <% end %>
+          <% end %>
+          <%= f.label :recipe_type_id, 'Tipo da Receita' %>
+          <%= f.select(:recipe_type_id) do %>
+            <% RecipeType.all.each do |c| -%>
+              <%= content_tag(:option, c.name, value: c.id) %>
+            <% end %>
+          <% end %>
+          <%= f.label :difficulty, 'Dificuldade' %>
+          <%= f.text_field :difficulty, class:'form-control' %>
+          <%= f.label :cook_time, 'Tempo de Preparo' %>
+          <%= f.text_field :cook_time, class:'form-control' %>
+          <%= f.label :ingredients, 'Ingredientes' %>
+          <%= f.text_field :ingredients, class:'form-control' %>
+          <%= f.label :method, 'Como Preparar' %>
+          <%= f.text_field :method, class:'form-control' %>
+          <br>
+          <%= f.submit 'Enviar', class:'btn btn-primary' %>
+        <% end %>
+    </div>
+    </section>
+  </div>
+</section>

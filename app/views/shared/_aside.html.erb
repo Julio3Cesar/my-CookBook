@@ -1,0 +1,20 @@
+<section class='col col-md-3'>
+  <aside class="left">
+    <h3>Cozinha</h3>
+    <% @cuisines.each do |cuisine|%>
+      <ul>
+        <li>
+          <h4> <%= link_to cuisine.name, cuisine %> </h4>
+        </li>
+      </ul>
+      <%end%>
+      <h3>Tipos de Receita</h3>
+      <% @recipes_types.each do |recipe_type|%>
+        <ul>
+          <li>
+            <h4> <%= link_to recipe_type.name, recipe_type %> </h4>
+          </li>
+        </ul>
+      <%end%>
+  </aside>
+</section>

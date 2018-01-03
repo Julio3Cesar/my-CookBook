@@ -1,13 +1,24 @@
-<h1><%= @recipe.title %></h1>
-<h3>Detalhes</h3>
-<p><%= @recipe.recipe_type %></p>
-<p><%= @recipe.cuisine %></p>
-<p><%= @recipe.difficulty %></p>
-<p><%= "#{@recipe.cook_time} minutos" %></p>
-<h3>Ingredientes</h3>
-<p><%= @recipe.ingredients %></p>
-<h3>Como Preparar</h3>
-<p><%= @recipe.method %></p>
-
-<%= link_to 'Voltar', root_path%>
-<%= link_to 'Editar', edit_recipe_path(@recipe) %>
+<section class="row">
+  <article class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title"><%= @recipe.title %></h1>
+      </div>
+      <div class="panel-body">
+        <h3>Detalhes</h3>
+        <p><strong>Tipo: </strong> <%= @recipe.recipe_type %></p>
+        <p><strong>Cozinha: </strong> <%= @recipe.cuisine %></p>
+        <p><strong>Dificuldade: </strong> <%= @recipe.difficulty %></p>
+        <p> <strong>Tempo de preparo: </strong> <%= "#{@recipe.cook_time} minutos" %></p>
+        <h3>Ingredientes: </h3>
+        <p><%= @recipe.ingredients %></p>
+        <h3>Como Preparar:</h3>
+        <p><%= @recipe.method %></p>
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Voltar', root_path, class:'btn btn-default'%>
+        <%= link_to 'Editar', edit_recipe_path(@recipe), class:'btn btn-default' %>
+      </div>
+    </div>
+  </article>
+</section>

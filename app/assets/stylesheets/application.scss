@@ -14,8 +14,12 @@
  *= require_self
  */
 
- aside{
-  float: right; /*define que o elemento deve flutuar à direita*/
-  padding: 10px; /*espaço entre a borda e o conteúdo do elemento*/
-  width: 20%; /*largura*/
+ /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+ .left{
+  float: left; /*define que o elemento deve flutuar à direita*/
+  // padding: 10px; /*espaço entre a borda e o conteúdo do elemento*/
+  width: 100%; /*largura*/
 }
