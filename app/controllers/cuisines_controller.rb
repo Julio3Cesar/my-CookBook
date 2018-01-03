@@ -1,8 +1,8 @@
-class CuisineController < ApplicationController
+class CuisinesController < ApplicationController
 
   def show
     @cuisine = Cuisine.find(params[:id])
-    @recipes = Recipe.where(cuisine_id: params[:id]).all
+    @recipes = Recipe.where("cuisine_id =?",  params[:id]).all
     if @recipes.blank?
       flash[:notice] =  'Nenhuma receita encontrada para este tipo de cozinha'
     else

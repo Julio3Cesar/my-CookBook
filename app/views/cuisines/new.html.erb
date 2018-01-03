@@ -1,6 +1,6 @@
 <h1>Nova Cozinha</h1>
 
-<%= form_for @cuisine,url: cuisine_index_path(@cuisine), html: { method: :post } do |f| %>
+<%= form_for @cuisine do |f| %>
   <% if @cuisine.errors.any? %>
     <h2> Erro: </h2>
     <ul>

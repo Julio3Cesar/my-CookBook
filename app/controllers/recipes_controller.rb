@@ -1,4 +1,4 @@
-class RecipeController < ApplicationController
+class RecipesController < ApplicationController
 
   def show 
     @recipe = Recipe.find(params[:id])
@@ -16,6 +16,21 @@ class RecipeController < ApplicationController
     else
       @recipe = recipe
       render :new
+    end
+  end
+
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    recipe = Recipe.new(recipe_params)
+    if recipe.valid?
+      recipe.update(recipe_params)
+      redirect_to recipe
+    else
+      @recipe = recipe
+      render :edit
     end
   end
 
