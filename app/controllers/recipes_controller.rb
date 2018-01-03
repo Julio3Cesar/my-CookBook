@@ -1,5 +1,17 @@
 class RecipesController < ApplicationController
 
+  def index
+    @recipes_types = RecipeType.all
+    @cuisines = Cuisine.all
+
+    @recipes = if params[:term]
+      Recipe.where('title LIKE ?', "%#{params[:term]}%")      
+    else
+      @recipes = Recipe.all
+    end
+    
+  end
+
   def show 
     @recipe = Recipe.find(params[:id])
   end  

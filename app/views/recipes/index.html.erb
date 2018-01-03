@@ -1,7 +1,6 @@
 <div>
   <header>
-    <h1>CookBook</h1>
-    <p>Bem-vindo ao maior livro de receitas online</p>
+    <h1> <%= "Resultado da busca por: #{params[:term]}" %> </h1>
     <%= form_tag(recipes_path, method: "get") do %>
       <%= label_tag(:term, "Busca") %>
       <%= text_field_tag(:term) %>
