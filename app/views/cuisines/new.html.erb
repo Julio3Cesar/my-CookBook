@@ -1,18 +1,25 @@
-<h1>Nova Cozinha</h1>
+<h1 class="page-header">Nova Cozinha</h1>
 
-<%= form_for @cuisine do |f| %>
-  <% if @cuisine.errors.any? %>
-    <h2> Erro: </h2>
-    <ul>
-    <% @cuisine.errors.messages.each do |msg| %>
-      <li><%= msg.last.last %></li>
+<div class="form-group form-inline">
+  <%= form_for @cuisine do |f| %>
+    <% if @cuisine.errors.any? %>
+      <h2> Erro: </h2>
+      <ul>
+      <% @cuisine.errors.messages.each do |msg| %>
+        <li><%= msg.last.last %></li>
+      <% end %>
+      </ul>
     <% end %>
-    </ul>
+
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.label :name, 'Nome' %>
+        <%= f.text_field :name, class:'form-control' %>
+      </div>
+      <div class="col-md-1">
+          <%= f.submit 'Enviar', class:'btn btn-primary' %>
+      </div>
+    </div>
   <% end %>
-
-  <%= f.label :name, 'Nome' %>
-  <%= f.text_field :name %>
-
-  <%= f.submit 'Enviar' %>
-<% end %>
+</div>
 

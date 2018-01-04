@@ -1,20 +1,29 @@
-<h1><%= @recipe_type.name %></h1>
+<nav class=row>
+  <section class="col-md-8">
+    <h1 class="page-header"><%= @recipe_type.name %></h1>
+  </section>
+</nav>
+  
 
-<div class="notice"><%= flash[:notice] %></div>
-<% @recipes.each do |recipe|%>
-  <h1><%= link_to recipe.title, recipe %></h1>
-  <ul>
-    <li>
-      <%= recipe.recipe_type %>
-    </li>
-    <li>
-      <%= recipe.cuisine.name %>
-    </li>
-    <li>
-      <%= recipe.difficulty %>
-    </li>
-    <li>
-      <%= "#{recipe.cook_time} minutos" %>
-    </li>
-  </ul>
-<%end%>
+<article class="row">
+  <h4 class="notice"><%= flash[:notice] %></h4>
+  <% @recipes.each do |recipe|%>
+    <section class="col-md-4">
+      <h1><%= link_to recipe.title, recipe %></h1>
+      <ul>
+        <li>
+          <%= recipe.recipe_type %>
+        </li>
+        <li>
+          <%= recipe.cuisine.name %>
+        </li>
+        <li>
+          <%= recipe.difficulty %>
+        </li>
+        <li>
+          <%= "#{recipe.cook_time} minutos" %>
+        </li>
+      </ul>
+    </section>
+  <%end%>
+</article>

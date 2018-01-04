@@ -11,9 +11,14 @@
 
   <body>
     <%= render 'shared/navbar' %>
-
+    
     <section class='container'>
-      <%= yield %>
+      <section class="row">
+        <%= render 'shared/aside' %>
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+      </section>
     </section>
   </body>
 </html>
