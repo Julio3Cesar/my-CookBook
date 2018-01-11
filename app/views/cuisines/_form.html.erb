@@ -1,0 +1,23 @@
+<div class="form-group form-inline">
+  <%= form_for @cuisine do |f| %>
+    <% if @cuisine.errors.any? %>
+      <h2> Erro: </h2>
+      <ul>
+      <% @cuisine.errors.messages.each do |msg| %>
+        <li><div class="error"><%= msg.last.last %></div></li>
+      <% end %>
+      </ul>
+    <% end %>
+
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.label :name, 'Nome' %>
+        <%= f.text_field :name, class:'form-control' %>
+      </div>
+      <div class="col-md-1">
+          <%= f.submit 'Enviar', class:'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :find_recipe, only: [:show, :edit, :destroy]
+  before_action :find_recipe, only: [:show, :edit, :destroy, :update]
 
   def search
     @term = params[:term]
@@ -31,7 +31,6 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = Recipe.new(recipe_params)
     if @recipe.update(recipe_params)
       redirect_to @recipe
     else

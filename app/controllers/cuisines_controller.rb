@@ -1,5 +1,5 @@
 class CuisinesController < ApplicationController
-  before_action :find_cuisine, only: [:show]
+  before_action :find_cuisine, only: [:show, :edit, :update]
   
   def show
     @recipes = Recipe.where(cuisine: params[:id])
@@ -18,6 +18,17 @@ class CuisinesController < ApplicationController
       redirect_to @cuisine
     else
       render :new
+    end
+  end
+
+  def edit 
+  end
+
+  def update
+    if @cuisine.update(cuisine_params)
+      redirect_to @cuisine
+    else
+      render edit_cuisine_path(@cuisine)
     end
   end
 
