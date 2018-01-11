@@ -6,7 +6,7 @@
       <h2> Erro: </h2>
       <ul>
       <% @recipe_type.errors.messages.each do |msg| %>
-        <li><%= msg.last.last %></li>
+        <li><div class="error"><%= msg.last.last %></div></li>
       <% end %>
       </ul>
     <% end %>
