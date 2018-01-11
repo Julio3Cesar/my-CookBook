@@ -11,10 +11,12 @@ feature 'User remove recipe' do
                           ingredients: 'Farinha, açucar, cenoura',
                           method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
+    #navigator
     visit root_path
     click_on recipe.title
     click_on 'Remover'
 
-    expect(page).not_to have_content(recipe.title)
+    #expect
+    expect(page).not_to have_css('h1', text: recipe.title)
   end
 end

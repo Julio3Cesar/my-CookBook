@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  resources :recipes, only: [:show, :new, :create, :edit, :update] do
+  resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy] do
     collection do
       get :search
     end

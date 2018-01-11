@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :find_recipe, only: [:show, :edit]
+  before_action :find_recipe, only: [:show, :edit, :destroy]
 
   def search
     @term = params[:term]
@@ -37,6 +37,11 @@ class RecipesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @recipe.destroy 
+    redirect_to root_path
   end
 
   private 
