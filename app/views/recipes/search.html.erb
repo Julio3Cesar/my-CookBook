@@ -1,0 +1,27 @@
+<nav class=row>
+  <header class="col-md-8">
+    <h1 class="page-header"> <%= "Resultado da busca por: #{@term}" %> </h1>
+  </header>
+</nav>
+  
+<section class="row">
+  <% @recipes.each do |recipe|%>
+    <section class="col-md-4">
+      <h1><%= link_to recipe.title, recipe %></h1>
+      <ul>
+        <li>
+          <%= recipe.recipe_type %>
+        </li>
+        <li>
+          <%= recipe.cuisine %>
+        </li>
+        <li>
+          <%= recipe.difficulty %>
+        </li>
+        <li>
+          <%= "#{recipe.cook_time} minutos" %>
+        </li>
+      </ul>
+    </section>  
+  <%end%>
+</section>

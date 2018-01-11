@@ -19,7 +19,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to  'Sair', root_path %></li>
         </ul>
-        <%= form_tag(recipes_path, method: "get", class:'navbar-form navbar-right') do %>
+        <%= form_tag(search_recipes_path, method: "get", class:'navbar-form navbar-right') do %>
           <%= label_tag(:term, "Busca", class:'label label-default') %>
           <%= text_field_tag(:term, "", class:"form-control") %>
           <%= submit_tag("Buscar", class:'btn btn-default')%>

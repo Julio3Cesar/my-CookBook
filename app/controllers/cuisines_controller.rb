@@ -1,12 +1,10 @@
 class CuisinesController < ApplicationController
-
+  before_action :find_cuisine, only: [:show]
+  
   def show
-    @cuisine = Cuisine.find(params[:id])
-    @recipes = Recipe.where("cuisine_id =?",  params[:id]).all
+    @recipes = Recipe.where(cuisine: params[:id])
     if @recipes.blank?
-      flash[:notice] =  'Nenhuma receita encontrada para este tipo de cozinha'
-    else
-      flash[:notice] =  ''
+      flash.now[:notice] =  'Nenhuma receita encontrada para este tipo de cozinha'
     end
   end
 
@@ -15,17 +13,19 @@ class CuisinesController < ApplicationController
   end
 
   def create
-    cuisine = Cuisine.new cuisine_params
-    if cuisine.valid?
-      cuisine.save
-      redirect_to cuisine
+    @cuisine = Cuisine.new cuisine_params
+    if @cuisine.save
+      redirect_to @cuisine
     else
-      @cuisine = cuisine
       render :new
     end
   end
 
   private 
+
+  def find_cuisine
+    @cuisine = Cuisine.find(params[:id])
+  end
 
   def cuisine_params
     params.require(:cuisine).permit(:name)

@@ -1,11 +1,10 @@
 class RecipesController < ApplicationController
+  before_action :find_recipe, only: [:show, :edit]
 
-  def index
-    @recipes_types = RecipeType.all
-    @cuisines = Cuisine.all
-
-    @recipes = if params[:term]
-      Recipe.where('title LIKE ?', "%#{params[:term]}%")      
+  def search
+    @term = params[:term]
+    if @term
+      @recipes = Recipe.where(title: params[:term])      
     else
       @recipes = Recipe.all
     end
@@ -13,7 +12,6 @@ class RecipesController < ApplicationController
   end
 
   def show 
-    @recipe = Recipe.find(params[:id])
   end  
 
   def new 
@@ -21,32 +19,31 @@ class RecipesController < ApplicationController
   end
 
   def create 
-    recipe = Recipe.new(recipe_params)
-    if recipe.valid?
-      recipe.save
-      redirect_to recipe
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      redirect_to @recipe
     else
-      @recipe = recipe
       render :new
     end
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
   end
 
   def update
-    recipe = Recipe.new(recipe_params)
-    if recipe.valid?
-      recipe.update(recipe_params)
-      redirect_to recipe
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.update(recipe_params)
+      redirect_to @recipe
     else
-      @recipe = recipe
       render :edit
     end
   end
 
   private 
+
+  def find_recipe
+    @recipe = Recipe.find(params[:id])
+  end
 
   def recipe_params
     params.require(:recipe).permit(:title, :recipe_type_id, :difficulty, :cuisine_id, :cook_time, :ingredients, :method)
