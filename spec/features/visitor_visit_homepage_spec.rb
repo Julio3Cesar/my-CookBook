@@ -31,7 +31,7 @@ feature 'Visitor visit homepage' do
 
   scenario 'and view recipes list' do
     #cria os dados necessários
-    cuisine = Cuisine.create(name: 'Brasileira')
+    cuisine = create(:cuisine)
     recipe_type = RecipeType.create(name: 'Sobremesa')
     recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: recipe_type,
                           cuisine: cuisine, difficulty: 'Médio',
