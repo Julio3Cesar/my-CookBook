@@ -18,4 +18,17 @@ feature 'User register cuisine' do
 
     expect(page).to have_content('Você deve informar o nome da cozinha')
   end
+
+  scenario 'User registers two equal cuisines' do
+    #setup
+    Cuisine.create(name: 'Brasileira')
+
+    #navigator
+    visit new_cuisine_path
+    fill_in 'Nome', with: 'Brasileira'
+    click_on 'Enviar'
+
+    #expect
+    expect(page).to have_css('div.error', text: 'Cozinha já cadastrada!')
+  end
 end
