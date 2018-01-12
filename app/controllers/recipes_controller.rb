@@ -44,6 +44,22 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
+  def favorite 
+    @recipes = Recipe.where(favorite: true)
+    
+  end
+
+  def new_favorite
+    recipe = Recipe.find params[:id]
+    recipe.update(favorite: !recipe.favorite)
+    if recipe.favorite
+      flash[:notice] = 'Adicionado a lista de favoritos'
+    else
+      flash[:notice] = 'Removido da lista de favoritos'
+    end
+    redirect_to recipe_path recipe
+  end
+
   private 
 
   def find_recipe
