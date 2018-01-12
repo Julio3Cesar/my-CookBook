@@ -17,7 +17,11 @@
           <li><%= link_to  'Enviar uma receita', new_recipe_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to  'Sair', root_path %></li>
+          <% if current_user %>
+            <li><%= link_to  'Logout', destroy_user_session_path %></li>
+          <% else %>
+            <li><%= link_to  'Login', new_user_session_path %></li>
+          <% end %>
         </ul>
         <%= form_tag(search_recipes_path, method: "get", class:'navbar-form navbar-right') do %>
           <%= label_tag(:term, "Busca", class:'label label-default') %>

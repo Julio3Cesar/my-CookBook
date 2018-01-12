@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+#gem devise for user authentication
+gem 'devise'
+#I18n for tranlations
+gem 'rails-i18n', '~> 5.0.0' # For 5.0.x and 5.1.x
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
