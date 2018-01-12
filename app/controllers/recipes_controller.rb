@@ -15,11 +15,12 @@ class RecipesController < ApplicationController
   end  
 
   def new 
-    @recipe = Recipe.new
+    @recipe = Recipe.new 
   end
 
   def create 
     @recipe = Recipe.new(recipe_params)
+    @recipe.author = current_user
     if @recipe.save
       redirect_to @recipe
     else

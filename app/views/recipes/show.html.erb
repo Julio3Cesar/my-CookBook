@@ -6,6 +6,9 @@
       </div>
       <div class="panel-body">
         <h3>Detalhes</h3>
+        <% if @recipe.author %>
+          <p><strong>Autor: </strong> <%= @recipe.author.email %></p>
+        <%end %>
         <p><strong>Tipo: </strong> <%= @recipe.recipe_type %></p>
         <p><strong>Cozinha: </strong> <%= @recipe.cuisine %></p>
         <p><strong>Dificuldade: </strong> <%= @recipe.difficulty %></p>
