@@ -18,7 +18,9 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li><%= link_to  'Logout', destroy_user_session_path %></li>
+            <%= form_tag( destroy_user_session_path , method: "delete", class:'navbar-form') do %>
+              <%= submit_tag("Logout", class:'btn btn-default')%>          
+            <% end %>
           <% else %>
             <li><%= link_to  'Login', new_user_session_path %></li>
           <% end %>

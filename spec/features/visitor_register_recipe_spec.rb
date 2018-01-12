@@ -36,6 +36,7 @@ feature 'Visitor register recipe' do
   scenario 'and must fill in all fields' do
     #cria os dados necessários, nesse caso não vamos criar dados no banco
     Cuisine.create(name: 'Arabe')
+    RecipeType.create(name: 'Sobremesa')
     # simula a ação do usuário
     visit root_path
     click_on 'Enviar uma receita'
