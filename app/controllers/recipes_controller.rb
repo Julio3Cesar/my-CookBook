@@ -10,7 +10,6 @@ class RecipesController < ApplicationController
     else
       @recipes = Recipe.all
     end
-    
   end
 
   def show 
@@ -44,6 +43,10 @@ class RecipesController < ApplicationController
   def destroy
     @recipe.destroy 
     redirect_to root_path
+  end
+
+  def index
+    @recipes = Recipe.all
   end
 
   private 

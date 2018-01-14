@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.last(6)
   end
 end

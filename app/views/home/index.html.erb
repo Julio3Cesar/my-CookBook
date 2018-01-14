@@ -12,6 +12,11 @@
     <section class="col-md-4">
       <h1><%= link_to recipe.title, recipe %></h1>
       <ul>
+        <% if recipe.author %>
+          <li>
+            <%= recipe.author.email %>
+          </li>
+        <% end %>
         <li>
           <%= recipe.recipe_type %>
         </li>
@@ -27,4 +32,5 @@
       </ul>
     </section>
   <%end%>
+  <%= link_to  "Visualizar tudo", recipes_path %>
 </article>
