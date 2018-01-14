@@ -3,13 +3,13 @@ require 'rails_helper'
 feature 'User favorite recipe' do
   scenario 'successfully' do 
     #setup 
-    recipe = create(:recipe, title: 'Bolo de fubá', favorite: false)
+    recipe = create(:recipe, title: 'Bolo de fubá')
     recipe2 = create(:recipe, title:'Bolo de maracujá Baiano',
                     cuisine: recipe.cuisine, recipe_type: recipe.recipe_type, 
-                    author: recipe.author, favorite: false)
+                    author: recipe.author)
     recipe3 = create(:recipe, title:'Macarrão de seila com coco (Doce)',
                     cuisine: recipe.cuisine, 
-                    recipe_type: recipe.recipe_type, author: recipe.author, favorite: false)
+                    recipe_type: recipe.recipe_type, author: recipe.author)
     user = User.new(email: 'user@gmail.com', password: '12345678')
 
     #navigator 

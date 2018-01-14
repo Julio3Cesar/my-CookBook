@@ -8,6 +8,5 @@ FactoryBot.define do
     ingredients 'Farinha, açucar, cenoura'
     add_attribute(:method) {'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes'}
     author {create(:user)}
-    favorite false
   end
 end

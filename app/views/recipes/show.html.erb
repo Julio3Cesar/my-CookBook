@@ -20,11 +20,16 @@
       </div>
       <div class="panel-footer">
         <%= link_to 'Voltar', root_path, class:'btn btn-default'%>
-        <%= link_to 'Editar', edit_recipe_path(@recipe), class:'btn btn-default' %>
+        <% if current_user && current_user == @recipe.author %>
+          <%= link_to 'Editar', edit_recipe_path(@recipe), class:'btn btn-default' %>
+        <% end %>
         <%= form_tag(recipe_path(@recipe), method: 'delete') do %>
           <%= submit_tag 'Remover', class:'btn btn-default' %>
         <% end %>
-        <%= form_tag(new_favorite_recipe_path(@recipe), method: 'post') do %>
+        <%= form_tag(favorites_path, method: 'post') do %>
+          <div style='visibility: hidden' >
+            <%= text_field_tag :id, @recipe.id %>
+          </div>
           <%= submit_tag 'Adicionar aos favoritos', class:'btn btn-default' %>
         <% end %>
       </div>

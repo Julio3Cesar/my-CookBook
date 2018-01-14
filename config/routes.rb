@@ -4,13 +4,9 @@ Rails.application.routes.draw do
   resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy] do
     collection do
       get :search
-      get :favorite
-    end
-
-    member do 
-      post :new_favorite
     end
   end
+  resources :favorites, only: [:index, :create]
   resources :cuisines, only: [:show, :new, :create, :edit, :update]
   resources :recipe_types, only: [:show, :new, :create]
 end

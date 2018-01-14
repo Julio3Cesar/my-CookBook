@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  # before_action :authenticate_user!, only: [:edit]
+  before_action :is_author, only: [:edit]
   before_action :find_recipe, only: [:show, :edit, :destroy, :update]
 
   def search
@@ -44,23 +46,16 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
-  def favorite 
-    @recipes = Recipe.where(favorite: true)
-    
-  end
-
-  def new_favorite
-    recipe = Recipe.find params[:id]
-    recipe.update(favorite: !recipe.favorite)
-    if recipe.favorite
-      flash[:notice] = 'Adicionado a lista de favoritos'
-    else
-      flash[:notice] = 'Removido da lista de favoritos'
-    end
-    redirect_to recipe_path recipe
-  end
-
   private 
+
+  def is_author
+    find_recipe
+    # if user_signed_in?
+      if !(current_user == @recipe.author)
+        redirect_to root_path
+      end
+    # end
+  end
 
   def find_recipe
     @recipe = Recipe.find(params[:id])
