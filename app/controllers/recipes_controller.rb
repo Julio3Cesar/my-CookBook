@@ -17,6 +17,11 @@ class RecipesController < ApplicationController
   end
 
   def show 
+    if current_user
+      if current_user.recipes
+        @is_favorite = current_user.recipes.include? @recipe
+      end
+    end
   end  
 
   def new 

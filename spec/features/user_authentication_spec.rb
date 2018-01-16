@@ -13,9 +13,9 @@ feature 'user authentication' do
     click_on 'Entrar'
 
     #expect
-    expect(page).not_to have_css('li', text: 'Login')
+    expect(page).not_to have_link('Login')
     expect(page).to have_content("Login efetuado com sucesso.")
-    expect(page).to have_button('Logout')
+    expect(page).to have_link('Logout')
   end 
 
   scenario 'logout sucess' do 
@@ -23,15 +23,13 @@ feature 'user authentication' do
     user = User.create(email: 'bob@gmail.com', password: '12345678')
 
     #navigate
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
+    visit root_path
     click_on 'Logout'
 
     #expect
-    expect(page).to have_content('Login')
+    expect(page).to have_link('Login')
     expect(page).to have_content("Logout efetuado com sucesso.")
-    expect(page).not_to have_button('Logout')
+    expect(page).not_to have_link('Logout')
   end
 end

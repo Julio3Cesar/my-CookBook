@@ -27,15 +27,15 @@
           <%= submit_tag 'Remover', class:'btn btn-default' %>
         <% end %>
 
-        <% if current_user%>
-          <%= link_to  "Adicionar aos favoritos", 
-            favorite_recipe_path, method: 'post', class:'btn btn-default' %>
-        <% else %>
-          <%= link_to  "Desfavoritar", 
-            favorite_recipe_path, method: 'delete', class:'btn btn-default' %>
+        <% if current_user %>
+          <% unless @is_favorite %>
+            <%= link_to  'Favoritar', 
+              favorite_recipe_path, method: 'post', class:'btn btn-default' %>
+          <% else %>
+            <%= link_to  "Desfavoritar", 
+              favorite_recipe_path, method: 'delete', class:'btn btn-default' %>
+          <% end %>
         <% end %>
-
-
       </div>
     </div>
   </article>
