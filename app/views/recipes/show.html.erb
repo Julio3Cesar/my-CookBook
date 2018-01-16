@@ -26,12 +26,16 @@
         <%= form_tag(recipe_path(@recipe), method: 'delete') do %>
           <%= submit_tag 'Remover', class:'btn btn-default' %>
         <% end %>
-        <%= form_tag(favorites_path, method: 'post') do %>
-          <div style='visibility: hidden' >
-            <%= text_field_tag :id, @recipe.id %>
-          </div>
-          <%= submit_tag 'Adicionar aos favoritos', class:'btn btn-default' %>
+
+        <% if current_user%>
+          <%= link_to  "Adicionar aos favoritos", 
+            favorite_recipe_path, method: 'post', class:'btn btn-default' %>
+        <% else %>
+          <%= link_to  "Desfavoritar", 
+            favorite_recipe_path, method: 'delete', class:'btn btn-default' %>
         <% end %>
+
+
       </div>
     </div>
   </article>

@@ -1,8 +1,8 @@
 class RecipesController < ApplicationController
   # before_action :authenticate_user!, only: [:edit]
-  before_action :is_author, only: [:edit]
-  before_action :find_recipe, only: [:show, :edit, :destroy, :update]
-
+  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author]
+  before_action :is_author, only: [:edit, :update]
+  
   def search
     @term = params[:term]
     if @term
@@ -10,6 +10,10 @@ class RecipesController < ApplicationController
     else
       @recipes = Recipe.all
     end
+  end
+  
+  def index
+    @recipes = Recipe.all
   end
 
   def show 
@@ -45,19 +49,27 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
-  def index
-    @recipes = Recipe.all
+
+  def favorite
+    recipe = Recipe.find(params[:id])
+    if recipe.favorites.create(user: current_user)
+      flash[:notice] = "Adicionado aos favoritos com sucesso!"
+    else
+      flash[:notice] = 'recipe.favorites.errors'
+    end
+    redirect_to recipe_path recipe 
+  end
+
+  def favorites
+    @recipes = current_user.recipes
   end
 
   private 
 
   def is_author
-    find_recipe
-    # if user_signed_in?
-      if !(current_user == @recipe.author)
-        redirect_to root_path
-      end
-    # end
+    unless current_user == @recipe.author
+      redirect_to root_path
+    end
   end
 
   def find_recipe

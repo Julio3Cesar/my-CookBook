@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   resources :recipes, only: [:show, :new, :create, :edit, :update, :destroy, :index] do
     collection do
       get :search
+      get :favorites
+    end
+    
+    member do 
+      post :favorite
+      delete :favorite
     end
   end
-  resources :favorites, only: [:index, :create]
   resources :cuisines, only: [:show, :new, :create, :edit, :update]
   resources :recipe_types, only: [:show, :new, :create]
 end

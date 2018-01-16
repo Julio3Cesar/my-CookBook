@@ -4,11 +4,13 @@
       <h1><%= link_to recipe.title, recipe %></h1>
       <ul>
         <li>
-          <%= recipe.author.email %>
-        </li>
-        <li>
           <%= recipe.recipe_type %>
         </li>
+        <% if recipe.author %>
+          <li>
+            <%= recipe.author.email %>
+          </li>
+        <% end %>
         <li>
           <%= recipe.cuisine %>
         </li>

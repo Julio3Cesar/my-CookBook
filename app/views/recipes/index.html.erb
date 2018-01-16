@@ -3,9 +3,11 @@
       <section class="col-md-4">
         <h1><%= link_to recipe.title, recipe %></h1>
         <ul>
-          <li>
-            <%= recipe.author.email %>
-          </li>
+          <% if recipe.author %>
+            <li>
+              <%= recipe.author.email %>
+            </li>
+          <% end %>
           <li>
             <%= recipe.recipe_type %>
           </li>
