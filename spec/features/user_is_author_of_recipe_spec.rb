@@ -8,13 +8,9 @@ feature 'User authenticated create new recipe' do
     user = User.create(email: 'bob@gmail.com', password: '12345678')
 
     #navigate
-    #login
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
-    #create a new recipe
-    click_on 'Enviar uma receita'
+    login_as user
+
+    visit new_recipe_path
     fill_in 'Título', with: 'Tabule'
     select 'Arabe', from: 'Cozinha'
     select 'Entrada', from: 'Tipo da Receita'
@@ -23,7 +19,6 @@ feature 'User authenticated create new recipe' do
     fill_in 'Ingredientes', with: 'Trigo para quibe, cebola, tomate picado, azeite, salsinha'
     fill_in 'Como Preparar', with: 'Misturar tudo e servir. Adicione limão a gosto.'
     click_on 'Enviar'
-    #end navigate
 
     #expect
     expect(page).to have_css('h1', text: 'Tabule')

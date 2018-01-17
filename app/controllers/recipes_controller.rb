@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
-  # before_action :authenticate_user!, only: [:edit]
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite]
-  before_action :is_author, only: [:edit, :update]
+  before_action :is_author, only: [:edit, :update, :destroy, :update]
   
   def search
     @term = params[:term]

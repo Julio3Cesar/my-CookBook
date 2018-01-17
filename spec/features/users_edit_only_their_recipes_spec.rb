@@ -10,10 +10,7 @@ feature 'Users edit only their recipes' do
                           cook_time: 90, author: user)
 
     #navigator
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
     visit edit_recipe_path recipe
     fill_in 'Título', with: 'Bolo de cenoura'
     fill_in 'Dificuldade', with: 'Médio'
@@ -40,10 +37,7 @@ feature 'Users edit only their recipes' do
                           cook_time: 90, author: user_2)
 
     #navigator
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
     visit recipe_path recipe
     
 
@@ -52,31 +46,31 @@ feature 'Users edit only their recipes' do
     expect(page).not_to have_content('Editar')
   end
 
-  scenario 'user not logged, not see button edit in recipe with author' do
+  scenario 'user not logged, not see button edit' do
     #Setup
     recipe = create(:recipe, title: 'Feijoada')
 
     #navigator
-    visit root_path
-    click_on recipe.title
+    visit recipe_path recipe
 
 
     expect(page).to have_css('h1', text: 'Feijoada')
-    expect(page).not_to have_content('Editar')
+    expect(page).not_to have_link('Editar')
   end
 
-  scenario 'user not logged, not see button edit' do
+  scenario 'user logged but not author, not see button edit' do
     #Setup
     user = create :user, email: 'youhull@bol.com'
-    recipe = create(:recipe, title: 'Feijoada', author: user)
+    another_user = create :user
+    recipe = create(:recipe, title: 'Feijoada', author: another_user)
 
     #navigator
-    visit root_path
-    click_on recipe.title
+    login_as user
+    visit recipe_path recipe
 
-
+    #expect
     expect(page).to have_css('h1', text: 'Feijoada')
-    expect(page).not_to have_content('Editar')
+    expect(page).not_to have_link('Editar')
   end
 
   scenario 'User LOGGED accesses route edit, but does not author the recipe' do
@@ -89,12 +83,8 @@ feature 'Users edit only their recipes' do
                           cook_time: 90, author: user_2)
 
     #navigator
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
     visit edit_recipe_path recipe
-
 
     expect(page).to have_current_path(root_path)
   end
