@@ -8,6 +8,7 @@ feature 'Visitor register recipe' do
     RecipeType.create(name: 'Prato Principal')
     RecipeType.create(name: 'Sobremesa')
     # simula a ação do usuário
+    login_as create :user
     visit root_path
     click_on 'Enviar uma receita'
 

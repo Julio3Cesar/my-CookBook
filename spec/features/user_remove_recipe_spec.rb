@@ -5,7 +5,7 @@ feature 'User remove recipe' do
     #setup
     main_type = RecipeType.create(name: 'Prato Principal')
     arabian_cuisine = Cuisine.create(name: 'Arabe')
-    recipe = Recipe.create(title: 'Bolodecenoura', recipe_type: main_type,
+    recipe = create(:recipe, title: 'Bolodecenoura', recipe_type: main_type,
                           cuisine: arabian_cuisine, difficulty: 'Médio',
                           cook_time: 50,
                           ingredients: 'Farinha, açucar, cenoura',

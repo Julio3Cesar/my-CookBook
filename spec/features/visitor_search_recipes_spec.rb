@@ -7,17 +7,17 @@ feature 'Visitor search for recipes' do
     recipe_type = RecipeType.create(name: 'Sobremesa')
     another_recipe_type = RecipeType.create(name: 'Entrada')
 
-    recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: recipe_type,
+    recipe = create(:recipe, title: 'Bolo de cenoura', recipe_type: recipe_type,
                            cuisine: cuisine, difficulty: 'Médio',
                            cook_time: 60,
                            ingredients: 'Farinha, açucar, cenoura',
                            method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
-    another_recipe = Recipe.create(title: 'Salada de cenoura', recipe_type: another_recipe_type,
+    another_recipe = create(:recipe, title: 'Salada de cenoura', recipe_type: another_recipe_type,
                            cuisine: cuisine, difficulty: 'Facil',
                            cook_time: 60,
                            ingredients: 'Cenoura e legumes',
-                           method: 'Cozinhe a cenoura, misture com os legumes')
+                           method: 'Cozinhe a cenoura, misture com os legumes', author: recipe.author)
 
     # simula a ação do usuário
     visit root_path
@@ -39,7 +39,7 @@ feature 'Visitor search for recipes' do
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe_type = RecipeType.create(name: 'Sobremesa')
 
-    recipe = Recipe.create(title: 'Bolo de cenoura', recipe_type: recipe_type,
+    recipe = create(:recipe, title: 'Bolo de cenoura', recipe_type: recipe_type,
                            cuisine: cuisine, difficulty: 'Médio',
                            cook_time: 60,
                            ingredients: 'Farinha, açucar, cenoura',

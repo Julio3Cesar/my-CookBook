@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   # before_action :authenticate_user!, only: [:edit]
-  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author]
+  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite]
   before_action :is_author, only: [:edit, :update]
   
   def search
@@ -56,17 +56,22 @@ class RecipesController < ApplicationController
 
 
   def favorite
-    recipe = Recipe.find(params[:id])
-    if recipe.favorites.create(user: current_user)
-      flash[:notice] = "Adicionado aos favoritos com sucesso!"
-    else
-      flash[:notice] = 'recipe.favorites.errors'
-    end
-    redirect_to recipe_path recipe 
+    @recipe.favorites.create(user: current_user)
+    flash[:notice] = "Adicionado aos favoritos com sucesso!"
+    redirect_to recipe_path @recipe 
+  end
+  
+  def unfavorite
+    Favorite.find_by(user: current_user, recipe: @recipe).destroy
+    flash[:notice] = 'Removido dos favoritos com sucesso!'
+    redirect_to recipe_path @recipe
   end
 
   def favorites
-    @recipes = current_user.recipes
+    @recipes = current_user.favorites_recipes
+    if @recipes.empty?
+      flash[:notice] = 'Nenhuma receita favorita!'
+    end
   end
 
   private 

@@ -54,7 +54,7 @@ feature 'Users edit only their recipes' do
 
   scenario 'user not logged, not see button edit in recipe with author' do
     #Setup
-    recipe = create(:recipe, title: 'Feijoada', author: nil)
+    recipe = create(:recipe, title: 'Feijoada')
 
     #navigator
     visit root_path

@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'User update recipe' do
   scenario 'successfully' do
-    pending
     #cria os dados necessários
     arabian_cuisine = Cuisine.create(name: 'Arabe')
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
@@ -11,13 +10,14 @@ feature 'User update recipe' do
     main_type = RecipeType.create(name: 'Prato Principal')
     dessert_type = RecipeType.create(name: 'Sobremesa')
 
-    recipe = Recipe.create(title: 'Bolodecenoura', recipe_type: main_type,
+    recipe = create(:recipe, title: 'Bolodecenoura', recipe_type: main_type,
                           cuisine: arabian_cuisine, difficulty: 'Médio',
                           cook_time: 50,
                           ingredients: 'Farinha, açucar, cenoura',
                           method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
     # simula a ação do usuário
+    login_as recipe.author
     visit root_path
     click_on 'Bolodecenoura'
     click_on 'Editar'
@@ -43,7 +43,6 @@ feature 'User update recipe' do
   end
 
   scenario 'and all fields must be filled' do
-    pending
     #cria os dados necessários, nesse caso não vamos criar dados no banco
     arabian_cuisine = Cuisine.create(name: 'Arabe')
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
@@ -52,13 +51,14 @@ feature 'User update recipe' do
     main_type = RecipeType.create(name: 'Prato Principal')
     dessert_type = RecipeType.create(name: 'Sobremesa')
 
-    recipe = Recipe.create(title: 'Bolodecenoura', recipe_type: main_type,
+    recipe = create(:recipe, title: 'Bolodecenoura', recipe_type: main_type,
                           cuisine: arabian_cuisine, difficulty: 'Médio',
                           cook_time: 50,
                           ingredients: 'Farinha, açucar, cenoura',
                           method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
     # simula a ação do usuário
+    login_as recipe.author
     visit root_path
     click_on 'Bolodecenoura'
     click_on 'Editar'

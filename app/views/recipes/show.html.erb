@@ -28,12 +28,12 @@
         <% end %>
 
         <% if current_user %>
-          <% unless @is_favorite %>
+          <% if @recipe.favorited? current_user %>
+            <%= link_to  "Desfavoritar", 
+              unfavorite_recipe_path, method: 'delete', class:'btn btn-default' %>
+          <% else %>
             <%= link_to  'Favoritar', 
               favorite_recipe_path, method: 'post', class:'btn btn-default' %>
-          <% else %>
-            <%= link_to  "Desfavoritar", 
-              favorite_recipe_path, method: 'delete', class:'btn btn-default' %>
           <% end %>
         <% end %>
       </div>
