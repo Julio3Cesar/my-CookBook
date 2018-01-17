@@ -20,10 +20,8 @@ feature 'user View the last 6 recipes' do
     author: another_user, cuisine: recipe_1.cuisine , recipe_type: recipe_1.recipe_type)
 
     #navigate
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
+    visit root_path
     
     #expect 
     #1 not expect
@@ -67,10 +65,8 @@ feature 'user View the last 6 recipes' do
     author: another_user, cuisine: recipe_1.cuisine , recipe_type: recipe_1.recipe_type)
 
     #navigate
-    visit new_user_session_path
-    fill_in 'Email', with: user.email
-    fill_in 'Senha', with: user.password
-    click_on 'Entrar'
+    login_as user
+    visit root_path
     click_on 'Visualizar tudo'
     
     #expect 
