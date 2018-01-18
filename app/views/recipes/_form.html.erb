@@ -16,6 +16,8 @@
 
       <section class="row">
         <div class="col col-md-5">
+          <%= f.label :photo, 'Adicionar foto' %>
+          <%= f.file_field :photo %>
           <%= f.label :title, 'Título' %>
           <%= f.text_field :title, class:'form-control' %>
           <%= f.label :cuisine_id, 'Cozinha' %>

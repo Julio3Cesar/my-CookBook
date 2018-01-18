@@ -41,6 +41,8 @@ gem 'rails-i18n', '~> 5.0.0' # For 5.0.x and 5.1.x
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "paperclip", "~> 5.0.0"
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 3.6'

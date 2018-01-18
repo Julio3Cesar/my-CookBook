@@ -9,6 +9,9 @@ class Recipe < ApplicationRecord
                         :difficulty, :cook_time, :ingredients, :method,
                         message: "Você deve informar todos os dados da receita"
 
+  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
+
   def favorited? user
     users_favored.include? user
   end
