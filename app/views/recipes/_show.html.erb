@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title"><%= @recipe.title %></h1>
+  </div>
+  <div class="panel-body">
+    <h3>Detalhes</h3>
+    <% if @recipe.author %>
+      <p><strong>Autor: </strong> <%= @recipe.author.email %></p>
+    <%end %>
+    <p><strong>Tipo: </strong> <%= @recipe.recipe_type %></p>
+    <p><strong>Cozinha: </strong> <%= @recipe.cuisine %></p>
+    <p><strong>Dificuldade: </strong> <%= @recipe.difficulty %></p>
+    <p> <strong>Tempo de preparo: </strong> <%= "#{@recipe.cook_time} minutos" %></p>
+    <h3>Ingredientes: </h3>
+    <p><%= @recipe.ingredients %></p>
+    <h3>Como Preparar:</h3>
+    <p><%= @recipe.method %></p>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Voltar', root_path, class:'btn btn-default'%>
+    <% if current_user %>
+      <% if @recipe.author? current_user %>
+        <%= link_to 'Editar', edit_recipe_path(@recipe), class:'btn btn-default' %>
+        <%= link_to  'Remover', recipe_path(@recipe), method: 'delete', class:'btn btn-default' %>
+      <% end %>
+      <% if @recipe.favorited? current_user %>
+        <%= link_to  "Desfavoritar", 
+          unfavorite_recipe_path, method: 'delete', class:'btn btn-default' %>
+      <% else %>
+        <%= link_to  'Favoritar', 
+          favorite_recipe_path, method: 'post', class:'btn btn-default' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

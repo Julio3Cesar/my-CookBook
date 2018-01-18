@@ -12,4 +12,9 @@ class Recipe < ApplicationRecord
   def favorited? user
     users_favored.include? user
   end
+
+  def author? user
+    return user.recipes.include? self if user
+    false
+  end
 end

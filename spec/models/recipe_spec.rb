@@ -29,4 +29,30 @@ RSpec.describe Recipe do
       expect(result).to be false
     end
   end
+
+  context '#author?' do 
+    it 'user is author' do 
+      recipe = create :recipe
+
+      result = recipe.author? recipe.author
+
+      expect(result).to be true
+    end
+
+    it 'recipe is not favorite' do 
+      recipe = create :recipe
+      another_author = create :user, email: 'another_author@bol.com'
+      result = recipe.author? another_author
+
+      expect(result).to be false
+    end
+
+    it 'user is nil' do 
+      recipe = create :recipe
+      user_nil = nil
+      result = recipe.author? user_nil
+
+      expect(result).to be false
+    end
+  end
 end

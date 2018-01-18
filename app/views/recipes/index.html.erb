@@ -1,27 +1,6 @@
 <article class="row">
-    <% @recipes.each do |recipe|%>
-      <section class="col-md-4">
-        <h1><%= link_to recipe.title, recipe %></h1>
-        <ul>
-          <% if recipe.author %>
-            <li>
-              <%= recipe.author.email %>
-            </li>
-          <% end %>
-          <li>
-            <%= recipe.recipe_type %>
-          </li>
-          <li>
-            <%= recipe.cuisine %>
-          </li>
-          <li>
-            <%= recipe.difficulty %>
-          </li>
-          <li>
-            <%= "#{recipe.cook_time} minutos" %>
-          </li>
-        </ul>
-      </section>
-    <%end%>
-  </article>
+  <% @recipes.each do |recipe|%>
+    <%= render recipe, object: recipe %>
+  <%end%>
+</article>
   
