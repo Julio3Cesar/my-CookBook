@@ -3,7 +3,25 @@
     <header class="page-header">
       <h1>CookBook</h1>
       <p>Bem-vindo ao maior livro de receitas online</p>
+      <%= link_to  "Visualizar tudo", recipes_path %>
     </header>
+  </section>
+  <section class="col-md-4">
+    <h4>Receitas mais favoritadas</h4>
+    <div class="most-favorite"> 
+      <%= "Nenhuma receita favoritada" if @most_favorites.empty? %>
+    </div>
+    <% @most_favorites.each do |recipe|%>
+      <ul>
+        <p>
+          <h4>
+            <div class="most-favorite"> 
+              <%= link_to recipe.title, recipe %> 
+            </div>
+          </h4>
+        </p>
+      </ul>
+    <% end%>
   </section>
 </nav>
 
@@ -11,5 +29,5 @@
   <% @recipes.each do |recipe|%>
     <%= render recipe, object: recipe %>
   <%end%>
-  <%= link_to  "Visualizar tudo", recipes_path %>
 </article>
+
