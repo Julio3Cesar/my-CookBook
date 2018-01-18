@@ -5,12 +5,13 @@ Rails.application.routes.draw do
     collection do
       get :search
       get :favorites
+      get :my
     end
     
     member do 
       post :favorite
       delete :unfavorite, to: 'recipes#unfavorite'   
-      post :share 
+      post :share
     end
   end
   resources :cuisines, only: [:show, :new, :create, :edit, :update]

@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :my]
   before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite, :share]
   before_action :require_login, only: [:edit, :update, :destroy]
   
@@ -62,6 +62,11 @@ class RecipesController < ApplicationController
       flash[:alert] = "Problemas ao enviar a receita para #{email}"
     end
     redirect_to recipe_path @recipe
+  end
+
+  def my 
+    @recipes = Recipe.where author: current_user
+    flash[:notice] = 'Você não possui receitas cadastradas!' if @recipes.empty?
   end
 
   private 

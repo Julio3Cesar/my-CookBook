@@ -1,0 +1,14 @@
+<nav class="row">
+  <section class="col-md-8">
+    <header class="page-header">
+      <h1>CookBook</h1>
+      <p>Todas as suas receitas</p>
+    </header>
+  </section>
+</nav>
+
+<article class="row">
+  <% @recipes.each do |recipe|%>
+    <%= render recipe, object: recipe %>
+  <%end%>
+</article>
