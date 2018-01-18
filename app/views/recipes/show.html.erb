@@ -35,5 +35,27 @@
         <% end %>
       </div>
     </div>
+    <hr>
   </article>
+  <article class="col-md-2">
+    <div class="row">
+      <h3>Enviar para um amigo</h3>
+    </div>
+    <div class="row">
+      <%= form_tag share_recipe_path, method: :post, class: 'form-group' do  %>
+        <div class="row">
+          <%= label_tag :email, 'Email' %>
+        </div>
+        <div class="row">
+            <%= text_field_tag :email,"" ,class: 'form-control' %>
+          </div>
+        <div class="row">
+          <%= label_tag :message, 'Mensagem' %>
+          <%= text_area_tag :message,"" ,class: 'form-control' %>
+        </div>
+        <%= submit_tag 'Enviar', class:'btn btn-default'  %>
+      <% end %>
+    </div>
+  </article>
+
 </section>

@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite]
+  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite, :share]
   before_action :is_author, only: [:edit, :update, :destroy, :update]
   
   def search
@@ -72,6 +72,15 @@ class RecipesController < ApplicationController
     if @recipes.empty?
       flash[:notice] = 'Nenhuma receita favorita!'
     end
+  end
+
+  def share
+    email = params[:email]
+    message = params[:message]
+    RecipesMailer.share(email: email, message: message, recipe_id: @recipe.id).deliver_now
+    
+    flash[:notice] = "Receita enviada para #{email}"
+    redirect_to recipe_path @recipe
   end
 
   private 
