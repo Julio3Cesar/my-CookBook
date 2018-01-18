@@ -113,4 +113,11 @@ feature 'User favorite recipe' do
     expect(page).not_to have_css('h1', text: recipe.title)
   end
 
+  scenario 'visit minhas receitas favoritas bu not logged' do 
+
+    visit favorites_recipes_path
+
+    expect(page).to have_current_path(new_user_session_path)
+  end
+
 end

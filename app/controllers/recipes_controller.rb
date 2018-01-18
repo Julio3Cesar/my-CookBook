@@ -1,11 +1,11 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :my]
+  before_action :authenticate_user!, only: [:new, :create, :my, :favorites]
   before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite, :share]
   before_action :require_login, only: [:edit, :update, :destroy]
   
   def search
     @term = params[:term]
-    @term ? @recipes = Recipe.where(title: @term) : @recipes = Recipe.all
+    @term ? @recipes = Recipe.where("title LIKE ? OR ingredients LIKE ?", "%#{@term}%", "%#{@term}%") : @recipes = Recipe.all
   end
   
   def index
