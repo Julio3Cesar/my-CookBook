@@ -13,4 +13,11 @@ class ApplicationController < ActionController::Base
   def find_recipe_type_aside
     @recipe_types = RecipeType.all
   end
+
+  def require_login
+    unless current_user == @recipe.author
+      flash[:alert] = "Acesso negado!"
+      redirect_to root_path
+    end
+  end
 end

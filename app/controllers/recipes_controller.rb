@@ -1,15 +1,11 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite, :share]
-  before_action :is_author, only: [:edit, :update, :destroy, :update]
+  before_action :require_login, only: [:edit, :update, :destroy]
   
   def search
     @term = params[:term]
-    if @term
-      @recipes = Recipe.where(title: params[:term])      
-    else
-      @recipes = Recipe.all
-    end
+    @term ? @recipes = Recipe.where(title: @term) : @recipes = Recipe.all
   end
   
   def index
@@ -17,11 +13,6 @@ class RecipesController < ApplicationController
   end
 
   def show 
-    if current_user
-      if current_user.recipes
-        @is_favorite = current_user.recipes.include? @recipe
-      end
-    end
   end  
 
   def new 
@@ -31,32 +22,22 @@ class RecipesController < ApplicationController
   def create 
     @recipe = Recipe.new(recipe_params)
     @recipe.author = current_user
-    if @recipe.save
-      redirect_to @recipe
-    else
-      render :new
-    end
+    @recipe.save ? redirect_to(@recipe) : render(:new)
   end
 
   def edit
   end
 
   def update
-    if @recipe.update(recipe_params)
-      redirect_to @recipe
-    else
-      render :edit
-    end
+    @recipe.update(recipe_params) ? redirect_to(@recipe) : render(:edit)
   end
 
   def destroy
-    @recipe.destroy 
-    redirect_to root_path
+    redirect_to(root_path) if @recipe.destroy
   end
 
-
   def favorite
-    @recipe.favorites.create(user: current_user)
+    Favorite.create(user: current_user, recipe: @recipe)
     flash[:notice] = "Adicionado aos favoritos com sucesso!"
     redirect_to recipe_path @recipe 
   end
@@ -69,27 +50,21 @@ class RecipesController < ApplicationController
 
   def favorites
     @recipes = current_user.favorites_recipes
-    if @recipes.empty?
-      flash[:notice] = 'Nenhuma receita favorita!'
-    end
+    flash[:notice] = 'Nenhuma receita favorita!' if @recipes.empty?
   end
 
   def share
     email = params[:email]
     message = params[:message]
-    RecipesMailer.share(email: email, message: message, recipe_id: @recipe.id).deliver_now
-    
-    flash[:notice] = "Receita enviada para #{email}"
+    if RecipesMailer.share(email: email, message: message, recipe_id: @recipe.id).deliver_now
+      flash[:notice] = "Receita enviada para #{email}"
+    else
+      flash[:alert] = "Problemas ao enviar a receita para #{email}"
+    end
     redirect_to recipe_path @recipe
   end
 
   private 
-
-  def is_author
-    unless current_user == @recipe.author
-      redirect_to root_path
-    end
-  end
 
   def find_recipe
     @recipe = Recipe.find(params[:id])

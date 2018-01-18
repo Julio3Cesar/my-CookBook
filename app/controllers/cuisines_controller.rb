@@ -3,9 +3,7 @@ class CuisinesController < ApplicationController
   
   def show
     @recipes = Recipe.where(cuisine: params[:id])
-    if @recipes.blank?
-      flash.now[:notice] =  'Nenhuma receita encontrada para este tipo de cozinha'
-    end
+    flash.now[:notice] =  'Nenhuma receita encontrada para este tipo de cozinha' if @recipes.blank?
   end
 
   def new
@@ -14,22 +12,14 @@ class CuisinesController < ApplicationController
 
   def create
     @cuisine = Cuisine.new cuisine_params
-    if @cuisine.save
-      redirect_to @cuisine
-    else
-      render :new
-    end
+    @cuisine.save ? redirect_to(@cuisine) : render(:new)
   end
 
   def edit 
   end
 
   def update
-    if @cuisine.update(cuisine_params)
-      redirect_to @cuisine
-    else
-      render edit_cuisine_path(@cuisine)
-    end
+    @cuisine.update(cuisine_params) ? redirect_to(@cuisine) : render(edit_cuisine_path @cuisine)
   end
 
   private 
