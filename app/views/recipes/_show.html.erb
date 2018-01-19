@@ -1,6 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1 class="panel-title"><%= @recipe.title %></h1>
+    <h1 class="panel-title">
+      <%= @recipe.title %>
+      <%if @recipe.favorited? current_user %>
+        <%= image_tag('star.png') %>
+      <% end %>
+    </h1>
   </div>
   <div class="panel-body">
     <% if @recipe.photo.file? %>

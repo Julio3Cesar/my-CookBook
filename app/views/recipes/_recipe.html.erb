@@ -1,5 +1,10 @@
 <section class="col-md-4">
-  <h1><%= link_to recipe.title, recipe %></h1>
+  <h1>
+    <%= link_to recipe.title, recipe %>
+    <%if recipe.favorited? current_user %>
+      <%= image_tag('star.png') unless current_page?(favorites_recipes_path)%>
+    <% end %>
+  </h1>
   <ul>
     <% if recipe.author %>
       <li>
