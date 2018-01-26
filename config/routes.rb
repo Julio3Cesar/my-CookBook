@@ -7,14 +7,13 @@ Rails.application.routes.draw do
       get :favorites
       get :my
     end
-    
-    member do 
+
+    member do
       post :favorite
-      delete :unfavorite, to: 'recipes#unfavorite'   
+      delete :unfavorite, to: 'recipes#unfavorite'
       post :share
     end
   end
-  resources :cuisines, only: [:show, :new, :create, :edit, :update]
-  resources :recipe_types, only: [:show, :new, :create]
+  resources :cuisines, only: %i[show new create edit update]
+  resources :recipe_types, only: %i[show new create]
 end
-

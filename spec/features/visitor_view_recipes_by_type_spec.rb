@@ -2,17 +2,16 @@
 require 'rails_helper'
 
 feature 'Visitor view recipes by type' do
-
   scenario 'from home page' do
     # cria os dados necessários previamente
     cuisine = Cuisine.create(name: 'Brasileira')
     recipe_type = RecipeType.create(name: 'Sobremesa')
 
     recipe = create(:recipe, title: 'Bolo de cenoura', recipe_type: recipe_type,
-                           cuisine: cuisine, difficulty: 'Médio',
-                           cook_time: 60,
-                           ingredients: 'Farinha, açucar, cenoura',
-                           method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
+                             cuisine: cuisine, difficulty: 'Médio',
+                             cook_time: 60,
+                             ingredients: 'Farinha, açucar, cenoura',
+                             method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
     # simula a ação do usuário
     visit root_path
@@ -32,18 +31,18 @@ feature 'Visitor view recipes by type' do
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
     dessert_recipe_type = RecipeType.create(name: 'Sobremesa')
     dessert_recipe = create(:recipe, title: 'Bolo de cenoura', recipe_type: dessert_recipe_type,
-                                   cuisine: brazilian_cuisine, difficulty: 'Médio',
-                                   cook_time: 60,
-                                   ingredients: 'Farinha, açucar, cenoura',
-                                   method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
+                                     cuisine: brazilian_cuisine, difficulty: 'Médio',
+                                     cook_time: 60,
+                                     ingredients: 'Farinha, açucar, cenoura',
+                                     method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
     italian_cuisine = Cuisine.create(name: 'Italiana')
     main_recipe_type = RecipeType.create(name: 'Prato Principal')
     main_recipe = create(:recipe, title: 'Macarrão Carbonara', recipe_type: main_recipe_type,
-                                cuisine: italian_cuisine, difficulty: 'Difícil',
-                                cook_time: 30, ingredients: 'Massa, ovos, bacon',
-                                method: 'Frite o bacon; Cozinhe a massa ate ficar al dent; Misture os ovos e o bacon a massa ainda quente;',
-                                author: dessert_recipe.author)
+                                  cuisine: italian_cuisine, difficulty: 'Difícil',
+                                  cook_time: 30, ingredients: 'Massa, ovos, bacon',
+                                  method: 'Frite o bacon; Cozinhe a massa ate ficar al dent; Misture os ovos e o bacon a massa ainda quente;',
+                                  author: dessert_recipe.author)
     # simula a ação do usuário
     visit root_path
     click_on main_recipe_type.name
@@ -66,10 +65,10 @@ feature 'Visitor view recipes by type' do
     brazilian_cuisine = Cuisine.create(name: 'Brasileira')
     recipe_type = RecipeType.create(name: 'Sobremesa')
     recipe = create(:recipe, title: 'Bolo de cenoura', recipe_type: recipe_type,
-                           cuisine: brazilian_cuisine, difficulty: 'Médio',
-                           cook_time: 60,
-                           ingredients: 'Farinha, açucar, cenoura',
-                           method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
+                             cuisine: brazilian_cuisine, difficulty: 'Médio',
+                             cook_time: 60,
+                             ingredients: 'Farinha, açucar, cenoura',
+                             method: 'Cozinhe a cenoura, corte em pedaços pequenos, misture com o restante dos ingredientes')
 
     main_dish_type = RecipeType.create(name: 'Prato Principal')
     # simula a ação do usuário

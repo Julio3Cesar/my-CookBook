@@ -1,18 +1,18 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe Recipe do 
-  context '#favorited?' do 
-    it 'recipe is favorite' do 
+RSpec.describe Recipe do
+  context '#favorited?' do
+    it 'recipe is favorite' do
       recipe = create :recipe
       user = recipe.author
       Favorite.create user: user, recipe: recipe
 
-      result =recipe.favorited? user
+      result = recipe.favorited? user
 
       expect(result).to be true
     end
 
-    it 'recipe is not favorite' do 
+    it 'recipe is not favorite' do
       recipe = create :recipe
       user = recipe.author
 
@@ -21,7 +21,7 @@ RSpec.describe Recipe do
       expect(result).to be false
     end
 
-    it 'user is nil' do 
+    it 'user is nil' do
       recipe = create :recipe
       user = nil
       result = recipe.favorited? user
@@ -30,8 +30,8 @@ RSpec.describe Recipe do
     end
   end
 
-  context '#author?' do 
-    it 'user is author' do 
+  context '#author?' do
+    it 'user is author' do
       recipe = create :recipe
 
       result = recipe.author? recipe.author
@@ -39,7 +39,7 @@ RSpec.describe Recipe do
       expect(result).to be true
     end
 
-    it 'recipe is not favorite' do 
+    it 'recipe is not favorite' do
       recipe = create :recipe
       another_author = create :user, email: 'another_author@bol.com'
       result = recipe.author? another_author
@@ -47,7 +47,7 @@ RSpec.describe Recipe do
       expect(result).to be false
     end
 
-    it 'user is nil' do 
+    it 'user is nil' do
       recipe = create :recipe
       user_nil = nil
       result = recipe.author? user_nil

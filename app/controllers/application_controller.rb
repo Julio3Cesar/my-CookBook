@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :find_cuisine_aside
   before_action :find_recipe_type_aside
 
-
-  private 
+  private
 
   def find_cuisine_aside
     @cuisines = Cuisine.all
@@ -16,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless current_user == @recipe.author
-      flash[:alert] = "Acesso negado!"
+      flash[:alert] = 'Acesso negado!'
       redirect_to root_path
     end
   end

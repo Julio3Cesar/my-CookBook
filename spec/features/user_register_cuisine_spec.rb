@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'User register cuisine' do
   scenario 'successfully' do
-
     visit new_cuisine_path
     fill_in 'Nome', with: 'Brasileira'
     click_on 'Enviar'
@@ -20,15 +19,15 @@ feature 'User register cuisine' do
   end
 
   scenario 'User registers two equal cuisines' do
-    #setup
+    # setup
     Cuisine.create(name: 'Brasileira')
 
-    #navigator
+    # navigator
     visit new_cuisine_path
     fill_in 'Nome', with: 'Brasileira'
     click_on 'Enviar'
 
-    #expect
+    # expect
     expect(page).to have_css('div.error', text: 'Cozinha já cadastrada!')
   end
 end

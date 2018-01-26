@@ -2,12 +2,12 @@ require 'rails_helper'
 
 feature 'User authenticated create new recipe' do
   scenario 'Successfully' do
-    #setup
+    # setup
     Cuisine.create(name: 'Arabe')
     RecipeType.create(name: 'Entrada')
     user = User.create(email: 'bob@gmail.com', password: '12345678')
 
-    #navigate
+    # navigate
     login_as user
 
     visit new_recipe_path
@@ -20,14 +20,14 @@ feature 'User authenticated create new recipe' do
     fill_in 'Como Preparar', with: 'Misturar tudo e servir. Adicione limão a gosto.'
     click_on 'Enviar'
 
-    #expect
+    # expect
     expect(page).to have_css('h1', text: 'Tabule')
     expect(page).to have_css('h3', text: 'Detalhes')
     expect(page).to have_css('p', text: user.email)
     expect(page).to have_css('p', text: 'Entrada')
     expect(page).to have_css('p', text: 'Arabe')
     expect(page).to have_css('p', text: 'Fácil')
-    expect(page).to have_css('p', text: "45 minutos")
+    expect(page).to have_css('p', text: '45 minutos')
     expect(page).to have_css('h3', text: 'Ingredientes')
     expect(page).to have_css('p', text: 'Trigo para quibe, cebola, tomate picado, azeite, salsinha')
     expect(page).to have_css('h3', text: 'Como Preparar')

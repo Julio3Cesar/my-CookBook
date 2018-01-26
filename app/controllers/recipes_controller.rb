@@ -1,32 +1,30 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :my, :favorites]
-  before_action :find_recipe, only: [:show, :edit, :destroy, :update, :is_author, :favorite, :unfavorite, :share]
-  before_action :require_login, only: [:edit, :update, :destroy]
-  
+  before_action :authenticate_user!, only: %i[new create my favorites]
+  before_action :find_recipe, only: %i[show edit destroy update is_author favorite unfavorite share]
+  before_action :require_login, only: %i[edit update destroy]
+
   def search
     @term = params[:term]
-    @term ? @recipes = Recipe.where("title LIKE ? OR ingredients LIKE ?", "%#{@term}%", "%#{@term}%") : @recipes = Recipe.all
+    @term ? @recipes = Recipe.where('title LIKE ? OR ingredients LIKE ?', "%#{@term}%", "%#{@term}%") : @recipes = Recipe.all
   end
-  
+
   def index
     @recipes = Recipe.all
   end
 
-  def show 
-  end  
+  def show; end
 
-  def new 
-    @recipe = Recipe.new 
+  def new
+    @recipe = Recipe.new
   end
 
-  def create 
+  def create
     @recipe = Recipe.new(recipe_params)
     @recipe.author = current_user
     @recipe.save ? redirect_to(@recipe) : render(:new)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @recipe.update(recipe_params) ? redirect_to(@recipe) : render(:edit)
@@ -38,10 +36,10 @@ class RecipesController < ApplicationController
 
   def favorite
     Favorite.create(user: current_user, recipe: @recipe)
-    flash[:notice] = "Adicionado aos favoritos com sucesso!"
-    redirect_to recipe_path @recipe 
+    flash[:notice] = 'Adicionado aos favoritos com sucesso!'
+    redirect_to recipe_path @recipe
   end
-  
+
   def unfavorite
     Favorite.find_by(user: current_user, recipe: @recipe).destroy
     flash[:notice] = 'Removido dos favoritos com sucesso!'
@@ -64,12 +62,12 @@ class RecipesController < ApplicationController
     redirect_to recipe_path @recipe
   end
 
-  def my 
+  def my
     @recipes = Recipe.where author: current_user
     flash[:notice] = 'Você não possui receitas cadastradas!' if @recipes.empty?
   end
 
-  private 
+  private
 
   def find_recipe
     @recipe = Recipe.find(params[:id])

@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'User register recipe_jype' do
   scenario 'successfully' do
-
     visit new_recipe_type_path
     fill_in 'Nome', with: 'Sobremesa'
     click_on 'Enviar'
@@ -19,11 +18,11 @@ feature 'User register recipe_jype' do
     expect(page).to have_content('Você deve informar o nome do tipo de receita')
   end
 
-  scenario 'User registers two equal recipes types' do 
-    #setup 
+  scenario 'User registers two equal recipes types' do
+    # setup
     RecipeType.create(name: 'Sobremesa')
 
-    #navigate
+    # navigate
     visit new_recipe_type_path
     fill_in 'Nome', with: 'Sobremesa'
     click_on 'Enviar'
