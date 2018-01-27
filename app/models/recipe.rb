@@ -5,11 +5,14 @@ class Recipe < ApplicationRecord
   has_many :favorites
   has_many :users_favored, through: :favorites, source: :user
 
-  validates_presence_of :title, :recipe_type, :cuisine,
-                        :difficulty, :cook_time, :ingredients, :method,
-                        message: 'Você deve informar todos os dados da receita'
+  validates :title, :recipe_type, :cuisine,
+            :difficulty, :cook_time, :ingredients, :method,
+            presence:
+            { message: 'Você deve informar todos os dados da receita' }
 
-  has_attached_file :photo, styles: { medium: '300x300>', thumb: '100x100>' }, default_url: '/images/:style/missing.png'
+  has_attached_file :photo, styles:
+                    { medium: '300x300>', thumb: '100x100>' },
+                    default_url: '/images/:style/missing.png'
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   def favorited?(user)
