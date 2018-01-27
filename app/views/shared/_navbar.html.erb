@@ -20,7 +20,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cozinha <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <% @cuisines.each do |cuisine|%>
-                    <li><%= link_to cuisine.name, cuisine %></li>
+                    <li><%= link_to cuisine.name.downcase, cuisine %></li>
                 <%end%>
               </ul>
             </li>
@@ -28,7 +28,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tipos de receita<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <% @recipe_types.each do |recipe_type|%>
-                        <li> <%= link_to recipe_type.name, recipe_type %> </li>
+                        <li> <%= link_to recipe_type.name.downcase, recipe_type %> </li>
                     </ul>
                   <%end%>
                 </ul>
